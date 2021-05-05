@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 
 const Dropdown = ({ isOpen, toggle }) => {
   return (
+    // (arti dari {isOpen ? '' : '') jika isOpen true maka menampilkan dropdown, jiak else maka hidden dropdown
+    // disini juga ada handler onClick
+    // jadi intinya, ketika dropdown di klik maka akan menyembunyikan dropdown
     <div className={isOpen ? 'grid grid-rows-4 text-center items-center bg-yellow-500' : 'hidden'} onClick={toggle}>
       <Link className="p-4" to="/">
         Home
