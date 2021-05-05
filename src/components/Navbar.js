@@ -14,13 +14,16 @@ const Navbar = ({ toggle }) => {
         ENDOK
       </Link>
       {/* icon open dropdown menu. diicon ini ada handler onClik yg memanggil fungsi toggle */}
-      {/* ketika svg di klik akan menyembunyikan svg */}
+      {/* svg hanya akan muncul ketika layar dibawah md, jika md atau diatasnya maka hidden */}
+      {/* ketika svg diklik maka akan menampilkan dropdown, */}
+      {/* karena variabel toggle akan menampilkan dropdown, dan ketika diklik lagi menyembunyikannya  */}
       <div className="px-4 cursor-pointer md:hidden" onClick={toggle}>
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </div>
-      {/* md:block hidden artinya ketika tampilan medium menu navbar akan dihilangkan */}
+      {/* (md:block hidden) artinya akan menyembunyikan link ketika layar md*/}
+
       <div className="pr-8 md:block hidden">
         <Link className="p-4" to="/">
           Home

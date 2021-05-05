@@ -1,4 +1,5 @@
 // useState & useEffect merupakan Hooks
+// useState akan mengolah data didalam komponen itu sendiri
 import React, { useState, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
@@ -41,7 +42,9 @@ function App() {
 
   return (
     <>
+      {/* navbar & dropdown akan mempassing data ke komponen mereka masing" */}
       <Navbar toggle={toggle} />
+      {/* dropdown displaynya akan hidden ketika diklik */}
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Switch>
         <Route path="/" exact component={Home} />
