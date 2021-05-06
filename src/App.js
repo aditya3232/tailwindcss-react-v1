@@ -25,6 +25,7 @@ function App() {
 
   // useEffect adalah efek samping dari sebuah fungsi
   // useEffect disini menghilangkan tampilan dropdown menu ketika layar dilebarkan
+  // karena dropdown menu tidak akan hilang ketika sudah terender
   useEffect(() => {
     const hideMenu = () => {
       if (window.innerWidth > 768 && isOpen) {
@@ -42,7 +43,7 @@ function App() {
 
   return (
     <>
-      {/* navbar & dropdown akan mempassing data ke komponen mereka masing" */}
+      {/* navbar & dropdown akan mempassing data (toggle/isOpen) ke komponen mereka masing" */}
       <Navbar toggle={toggle} />
       {/* dropdown displaynya akan hidden ketika diklik */}
       <Dropdown isOpen={isOpen} toggle={toggle} />
@@ -57,3 +58,9 @@ function App() {
 }
 
 export default App;
+
+// catatan useEffect
+
+// Ketika Anda ingin melakukan sesuatu setelah setiap render seperti efek samping (yaitu mengambil data dari API),
+// Anda dapat meneruskan efek tersebut ke useEffecthook,
+// kemudian React akan membuat catatan tentang fungsi yang Anda berikan ke hook dan itu akan memanggil fungsi itu setelah melakukan pembaruan DOM

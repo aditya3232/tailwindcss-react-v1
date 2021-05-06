@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 // agar dapat terhubung, dengan app.js, maka toggle juga harus dilempar di <Navbar toggle={toggle} />
 const Navbar = ({ toggle }) => {
   return (
+    // tailwindcss yg membuat nav, terlihat seperti navigasi dituliskan disini
     <nav className="flex justify-between items-center h-16 bg-white text-black relative shadow-sm font-mono" role="navigation">
       {/* Nama website */}
       <Link to="/" className="pl-8">

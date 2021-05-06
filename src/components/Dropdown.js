@@ -3,9 +3,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// dropdown terdapat props
 const Dropdown = ({ isOpen, toggle }) => {
   return (
-    // (arti dari {isOpen ? '' : '') if isOpen maka menampilkan dropdown, jiak else maka hidden dropdown
+    // (arti dari {isOpen ? '' : '') if isOpen maka menampilkan dropdown, else maka hidden dropdown
     // disini juga ada handler onClick
     // jadi intinya, ketika dropdown di klik maka akan menyembunyikan dropdown, karena onClick bernilai True
     // isOpen bernilai awal false
