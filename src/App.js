@@ -64,3 +64,11 @@ export default App;
 // Ketika Anda ingin melakukan sesuatu setelah setiap render seperti efek samping (yaitu mengambil data dari API),
 // Anda dapat meneruskan efek tersebut ke useEffecthook,
 // kemudian React akan membuat catatan tentang fungsi yang Anda berikan ke hook dan itu akan memanggil fungsi itu setelah melakukan pembaruan DOM
+
+// catatan router
+
+// Route bisa dituliskan seperti ini <Route>...</Route>
+// didalam titik" ini diisi dengan komponen apa yg akan ditampilkan dalam path yg ditentukan
+// dengan begitu kita dapat menerapkan Route ke komponen 404 Not Found yg tidak menampilkan komponen navbar dan footer
+
+// catatan <NavLink to="">...</NavLink>: digunakan untuk membuat tombol link menuju path
